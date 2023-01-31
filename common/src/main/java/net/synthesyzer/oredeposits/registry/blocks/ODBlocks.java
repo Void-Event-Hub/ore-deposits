@@ -17,14 +17,14 @@ public class ODBlocks {
 
     public static final Supplier<ChargingDepositBlock> CHARGING_DEPOSIT = registerBlock("charging_deposit", true, () -> new ChargingDepositBlock(Block.Properties.copy(Blocks.BEDROCK)));
 
-    public static final Supplier<DepositBlock> COAL_DEPOSIT = registerBlock("coal_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.COAL_ORE), "coal"));
-    public static final Supplier<DepositBlock> COPPER_DEPOSIT = registerBlock("copper_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.COPPER_ORE), "copper"));
-    public static final Supplier<DepositBlock> DIAMOND_DEPOSIT = registerBlock("diamond_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.DIAMOND_ORE), "diamond"));
-    public static final Supplier<DepositBlock> EMERALD_DEPOSIT = registerBlock("emerald_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.EMERALD_ORE), "emerald"));
-    public static final Supplier<DepositBlock> GOLD_DEPOSIT = registerBlock("gold_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.GOLD_ORE), "gold"));
-    public static final Supplier<DepositBlock> IRON_DEPOSIT = registerBlock("iron_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.IRON_ORE), "iron"));
-    public static final Supplier<DepositBlock> LAPIS_DEPOSIT = registerBlock("lapis_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE), "lapis"));
-    public static final Supplier<DepositBlock> REDSTONE_DEPOSIT = registerBlock("redstone_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE), "redstone"));
+    public static final Supplier<DepositBlock> COAL_DEPOSIT = registerBlock("coal_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.COAL_ORE).explosionResistance(3600000f), "coal"));
+    public static final Supplier<DepositBlock> COPPER_DEPOSIT = registerBlock("copper_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.COPPER_ORE).explosionResistance(3600000f), "copper"));
+    public static final Supplier<DepositBlock> DIAMOND_DEPOSIT = registerBlock("diamond_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.DIAMOND_ORE).explosionResistance(3600000f), "diamond"));
+    public static final Supplier<DepositBlock> EMERALD_DEPOSIT = registerBlock("emerald_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.EMERALD_ORE).explosionResistance(3600000f), "emerald"));
+    public static final Supplier<DepositBlock> GOLD_DEPOSIT = registerBlock("gold_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.GOLD_ORE).explosionResistance(3600000f), "gold"));
+    public static final Supplier<DepositBlock> IRON_DEPOSIT = registerBlock("iron_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.IRON_ORE).explosionResistance(3600000f), "iron"));
+    public static final Supplier<DepositBlock> LAPIS_DEPOSIT = registerBlock("lapis_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(3600000f), "lapis"));
+    public static final Supplier<DepositBlock> REDSTONE_DEPOSIT = registerBlock("redstone_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(3600000f), "redstone"));
 
     @SuppressWarnings("unchecked")
     private static <T extends Block> Supplier<T> registerBlock(String name, boolean createItem, Supplier<T> block) {
