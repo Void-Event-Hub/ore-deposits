@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "ore_deposits:coal_deposit",
+    "ore_deposits:iron_deposit",
+    "ore_deposits:gold_deposit",
+    "ore_deposits:lapis_deposit",
+    "ore_deposits:redstone_deposit",
+    "ore_deposits:diamond_deposit",
+    "ore_deposits:emerald_deposit",
+    "ore_deposits:copper_deposit"
+  ]
+}

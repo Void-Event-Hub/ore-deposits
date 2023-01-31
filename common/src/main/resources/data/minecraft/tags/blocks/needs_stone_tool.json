@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ore_deposits:iron_deposit",
+    "ore_deposits:lapis_deposit",
+    "ore_deposits:redstone_deposit",
+    "ore_deposits:copper_deposit"
+  ]
+}
