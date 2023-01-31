@@ -6,10 +6,10 @@ license = "Insert License Here"
 [[mods]]
 modId = "ore_deposits"
 version = "${version}"
-displayName = "Example Mod"
+displayName = "Synth's Ore Deposits"
 authors = "Me!"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+In-exhaustive ores!
 '''
 #logoFile = ""
 
