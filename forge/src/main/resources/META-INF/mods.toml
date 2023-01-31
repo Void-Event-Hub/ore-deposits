@@ -7,7 +7,7 @@ license = "Insert License Here"
 modId = "ore_deposits"
 version = "${version}"
 displayName = "Synth's Ore Deposits"
-authors = "Me!"
+authors = "Daan Schar [Synthesyzer]"
 description = '''
 In-exhaustive ores!
 '''

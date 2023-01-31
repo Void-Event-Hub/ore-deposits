@@ -2,14 +2,13 @@
   "schemaVersion": 1,
   "id": "ore_deposits",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Synth's Ore Deposits",
+  "description": "In-exhaustive Ores!",
   "authors": [
-    "Me!"
+    "Daan Schar [Synthesyzer]"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/DaanSchar/ore-deposits"
   },
   "license": "Insert License Here",
   "icon": "assets/examplemod/icon.png",
