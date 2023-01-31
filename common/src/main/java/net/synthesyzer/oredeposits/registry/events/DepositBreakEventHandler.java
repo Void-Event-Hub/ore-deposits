@@ -6,7 +6,7 @@ import dev.architectury.utils.value.IntValue;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -73,10 +73,14 @@ public class DepositBreakEventHandler {
                 .withParameter(LootContextParams.THIS_ENTITY, player)
                 .withParameter(LootContextParams.BLOCK_STATE, state);
 
+        world.playSound(null, player.blockPosition(), SoundEvents.ITEM_PICKUP, player.getSoundSource(), 0.6f, 1f + (float) Math.random() * 0.5f);
+
+        player.giveExperiencePoints(1);
+
         List<ItemStack> lootTables = lootTable.getRandomItems(builder.create(LootContextParamSets.BLOCK));
 
         for (ItemStack lootTableEntry : lootTables) {
-            world.addFreshEntity(new ItemEntity(world, player.getX(), player.getY(), player.getZ(), lootTableEntry));
+            player.addItem(lootTableEntry);
         }
     }
 }
