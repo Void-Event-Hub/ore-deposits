@@ -59,7 +59,7 @@ public class DepositBreakEventHandler {
     }
 
     private static void damageMainHandTool(Player player) {
-        player.getMainHandItem().setDamageValue(player.getMainHandItem().getDamageValue() + 1);
+        player.getMainHandItem().hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(player.getUsedItemHand()));
     }
 
     private static void dropLootTable(ServerLevel world, Player player, BlockState state) {
