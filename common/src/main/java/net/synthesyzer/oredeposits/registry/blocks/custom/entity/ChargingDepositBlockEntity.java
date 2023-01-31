@@ -123,8 +123,11 @@ public class ChargingDepositBlockEntity extends BlockEntity {
     protected void saveAdditional(CompoundTag compoundTag) {
         super.saveAdditional(compoundTag);
         compoundTag.putInt("progress", progress);
-        CompoundTag blockStateTag = NbtUtils.writeBlockState(block.defaultBlockState());
-        compoundTag.put("blockState", blockStateTag);
+
+        if (this.block != null) {
+            CompoundTag blockStateTag = NbtUtils.writeBlockState(block.defaultBlockState());
+            compoundTag.put("blockState", blockStateTag);
+        }
     }
 
     @Override

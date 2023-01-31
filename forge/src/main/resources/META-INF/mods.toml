@@ -1,35 +1,35 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[40,)"
 #issueTrackerURL = ""
 license = "Insert License Here"
 
 [[mods]]
 modId = "ore_deposits"
 version = "${version}"
-displayName = "Example Mod"
+displayName = "Synth's Ore Deposits"
 authors = "Me!"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+In-exhaustive ores!
 '''
 #logoFile = ""
 
 [[dependencies.ore_deposits]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[40,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.ore_deposits]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
+versionRange = "[1.18.2,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.ore_deposits]]
 modId = "architectury"
 mandatory = true
-versionRange = "[6.2.43,)"
+versionRange = "[4.9.83,)"
 ordering = "AFTER"
 side = "BOTH"

@@ -17,11 +17,14 @@
   "entrypoints": {
     "main": [
       "net.synthesyzer.oredeposits.fabric.OreDepositsFabric"
+    ],
+    "jade": [
+      "net.synthesyzer.oredeposits.fabric.jade.OreDepositsPlugin"
     ]
   },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.2",
-    "architectury": ">=6.2.43"
+    "minecraft": ">=1.18.2",
+    "architectury": ">=4.9.83"
   }
 }

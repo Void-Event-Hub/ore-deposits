@@ -1,5 +1,6 @@
 package net.synthesyzer.oredeposits;
 
+import net.synthesyzer.oredeposits.config.Config;
 import net.synthesyzer.oredeposits.registry.blocks.ODBlockEntities;
 import net.synthesyzer.oredeposits.registry.blocks.ODBlocks;
 import net.synthesyzer.oredeposits.registry.events.DepositBreakEventHandler;
@@ -17,5 +18,6 @@ public class OreDeposits {
         ODBlocks.registerBlocks();
         ODBlockEntities.registerBlockEntities();
         DepositBreakEventHandler.register();
+        Config.registerConfigs();
     }
 }
