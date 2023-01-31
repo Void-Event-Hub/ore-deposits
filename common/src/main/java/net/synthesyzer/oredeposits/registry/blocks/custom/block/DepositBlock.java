@@ -1,6 +1,8 @@
 package net.synthesyzer.oredeposits.registry.blocks.custom.block;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.PushReaction;
 
 public class DepositBlock extends Block {
 
@@ -13,5 +15,10 @@ public class DepositBlock extends Block {
 
     public String getConfigName() {
         return configName;
+    }
+
+    @Override
+    public PushReaction getPistonPushReaction(BlockState blockState) {
+        return PushReaction.BLOCK;
     }
 }
