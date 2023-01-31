@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "oredeposits",
+  "id": "ore_deposits",
   "version": "${version}",
   "name": "Example Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "net.synthesyzer.oredeposits.fabric.OreDepositsFabric"
+    ],
+    "jade": [
+      "net.synthesyzer.oredeposits.jade.OreDepositsPlugin"
     ]
   },
   "depends": {

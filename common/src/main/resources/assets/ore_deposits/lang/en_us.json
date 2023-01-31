@@ -1,4 +1,5 @@
 {
+  "block.ore_deposits.charging_deposit": "Charging Deposit",
   "block.ore_deposits.coal_deposit": "Coal Deposit",
   "block.ore_deposits.copper_deposit": "Copper Deposit",
   "block.ore_deposits.diamond_deposit": "Diamond Deposit",
@@ -6,5 +7,6 @@
   "block.ore_deposits.gold_deposit": "Gold Deposit",
   "block.ore_deposits.iron_deposit": "Iron Deposit",
   "block.ore_deposits.lapis_deposit": "Lapis Deposit",
-  "block.ore_deposits.redstone_deposit": "Redstone Deposit"
+  "block.ore_deposits.redstone_deposit": "Redstone Deposit",
+  "config.jade.plugin_ore_deposits.charging_deposit": "Charging Deposit"
 }
