@@ -3,6 +3,9 @@
   "values": [
     "ore_deposits:diamond_deposit",
     "ore_deposits:emerald_deposit",
-    "ore_deposits:gold_deposit"
+    "ore_deposits:gold_deposit",
+    "ore_deposits:aquarite_deposit",
+    "ore_deposits:flamnite_deposit",
+    "ore_deposits:voidium_deposit"
   ]
 }

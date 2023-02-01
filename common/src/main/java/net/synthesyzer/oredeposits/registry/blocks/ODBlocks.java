@@ -26,6 +26,11 @@ public class ODBlocks {
     public static final Supplier<DepositBlock> LAPIS_DEPOSIT = registerBlock("lapis_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f), "lapis"));
     public static final Supplier<DepositBlock> REDSTONE_DEPOSIT = registerBlock("redstone_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f), "redstone"));
 
+    public static final Supplier<DepositBlock> AQUARITE_DEPOSIT = registerBlock("aquarite_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f), "aquarite"));
+    public static final Supplier<DepositBlock> FLAMNITE_DEPOSIT = registerBlock("flamnite_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f), "flamnite"));
+    public static final Supplier<DepositBlock> VOIDIUM_DEPOSIT = registerBlock("voidium_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f), "voidium"));
+
+
     @SuppressWarnings("unchecked")
     private static <T extends Block> Supplier<T> registerBlock(String name, boolean createItem, Supplier<T> block) {
         Supplier<T> toReturn = RegistryHelper.registerBlock(name, block);

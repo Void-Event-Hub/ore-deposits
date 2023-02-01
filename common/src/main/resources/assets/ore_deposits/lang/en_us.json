@@ -7,6 +7,11 @@
   "block.ore_deposits.gold_deposit": "Gold Deposit",
   "block.ore_deposits.iron_deposit": "Iron Deposit",
   "block.ore_deposits.lapis_deposit": "Lapis Deposit",
-  "block.ore_deposits.redstone_deposit": "Redstone Deposit",
+  "block.ore_deposits.aquarite_deposit": "Aquarite Deposit",
+  "block.ore_deposits.flamnite_deposit": "Flamnite Deposit",
+  "block.ore_deposits.voidium_deposit": "Voidium Deposit",
+  "item.ore_deposits.aquarite": "Aquarite",
+  "item.ore_deposits.flamnite": "Flamnite",
+  "item.ore_deposits.voidium": "Aquarite",
   "config.jade.plugin_ore_deposits.charging_deposit": "Charging Deposit"
 }
