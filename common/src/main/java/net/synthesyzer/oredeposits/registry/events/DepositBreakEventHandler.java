@@ -47,9 +47,9 @@ public class DepositBreakEventHandler {
         }
 
         if (block instanceof DepositBlock depositBlock) {
-            dropLootTable((ServerLevel) level, player, blockState);
+            givePlayerBlockLootTable((ServerLevel) level, player, blockState);
+            level.playSound(null, player.blockPosition(), SoundEvents.ITEM_PICKUP, player.getSoundSource(), 0.6f, 1f + (float) Math.random() * 0.5f);
             damageMainHandTool(player);
-
             brokenBlocks.put(blockPos, depositBlock);
 
             level.setBlock(blockPos, ODBlocks.CHARGING_DEPOSIT.get().defaultBlockState(), 3);
@@ -63,25 +63,27 @@ public class DepositBreakEventHandler {
         player.getMainHandItem().hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(player.getUsedItemHand()));
     }
 
-    private static void dropLootTable(ServerLevel world, Player player, BlockState state) {
-        LootTables lootManager = world.getServer().getLootTables();
-        LootTable lootTable = lootManager.get(state.getBlock().getLootTable());
-        LootContext.Builder builder = new LootContext.Builder(world)
+    private static void givePlayerBlockLootTable(ServerLevel level, Player player, BlockState blockState) {
+        List<ItemStack> lootTable = getLootTable(level, player, blockState);
+
+        for (ItemStack itemStack : lootTable) {
+            if (player.getInventory().getFreeSlot() == -1) {
+                player.drop(itemStack, false);
+            } else {
+                player.addItem(itemStack);
+            }
+        }
+
+        player.giveExperiencePoints(1);
+    }
+
+    private static List<ItemStack> getLootTable(ServerLevel world, Player player, BlockState state) {
+        return state.getDrops(new LootContext.Builder(world)
                 .withLuck(player.getLuck())
                 .withRandom(player.getRandom())
                 .withParameter(LootContextParams.ORIGIN, player.position())
                 .withParameter(LootContextParams.TOOL, player.getMainHandItem())
                 .withParameter(LootContextParams.THIS_ENTITY, player)
-                .withParameter(LootContextParams.BLOCK_STATE, state);
-
-        world.playSound(null, player.blockPosition(), SoundEvents.ITEM_PICKUP, player.getSoundSource(), 0.6f, 1f + (float) Math.random() * 0.5f);
-
-        player.giveExperiencePoints(1);
-
-        List<ItemStack> lootTables = lootTable.getRandomItems(builder.create(LootContextParamSets.BLOCK));
-
-        for (ItemStack lootTableEntry : lootTables) {
-            player.addItem(lootTableEntry);
-        }
+                .withParameter(LootContextParams.BLOCK_STATE, state));
     }
 }
