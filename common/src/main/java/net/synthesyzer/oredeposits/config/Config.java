@@ -37,6 +37,10 @@ public class Config {
                 defaultConfig.add("iron", new JsonPrimitive(60));
                 defaultConfig.add("lapis", new JsonPrimitive(45));
                 defaultConfig.add("redstone", new JsonPrimitive(45));
+                defaultConfig.add("aquarite", new JsonPrimitive(90));
+                defaultConfig.add("flamnite", new JsonPrimitive(90));
+                defaultConfig.add("voidium", new JsonPrimitive(90));
+
                 writer.write(gson.toJson(defaultConfig));
                 configs = defaultConfig;
             } catch (IOException ee) {

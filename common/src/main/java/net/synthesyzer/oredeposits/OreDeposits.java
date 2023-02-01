@@ -4,6 +4,7 @@ import net.synthesyzer.oredeposits.config.Config;
 import net.synthesyzer.oredeposits.registry.blocks.ODBlockEntities;
 import net.synthesyzer.oredeposits.registry.blocks.ODBlocks;
 import net.synthesyzer.oredeposits.registry.events.DepositBreakEventHandler;
+import net.synthesyzer.oredeposits.registry.items.ODItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,6 +19,7 @@ public class OreDeposits {
         ODBlocks.registerBlocks();
         ODBlockEntities.registerBlockEntities();
         DepositBreakEventHandler.register();
+        ODItems.register();
         Config.registerConfigs();
     }
 }
