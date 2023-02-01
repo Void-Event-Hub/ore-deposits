@@ -27,9 +27,8 @@ public class ODBlocks {
     public static final Supplier<DepositBlock> REDSTONE_DEPOSIT = registerBlock("redstone_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(3600000f).requiresCorrectToolForDrops(), "redstone"));
 
     public static final Supplier<DepositBlock> AQUARITE_DEPOSIT = registerBlock("aquarite_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f).requiresCorrectToolForDrops(), "aquarite"));
-    public static final Supplier<DepositBlock> FLAMNITE_DEPOSIT = registerBlock("flamnite_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f).requiresCorrectToolForDrops(), "flamnite"));
-    public static final Supplier<DepositBlock> VOIDIUM_DEPOSIT = registerBlock("voidium_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f).requiresCorrectToolForDrops(), "voidium"));
-
+    public static final Supplier<DepositBlock> FLAMNITE_DEPOSIT = registerBlock("flamnite_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f).requiresCorrectToolForDrops().lightLevel((bs) -> 10), "flamnite"));
+    public static final Supplier<DepositBlock> VOIDIUM_DEPOSIT = registerBlock("voidium_deposit", true, () -> new DepositBlock(Block.Properties.copy(Blocks.LAPIS_ORE).explosionResistance(360000f).requiresCorrectToolForDrops().lightLevel((bs) -> 10), "voidium"));
 
     @SuppressWarnings("unchecked")
     private static <T extends Block> Supplier<T> registerBlock(String name, boolean createItem, Supplier<T> block) {
