@@ -23,7 +23,7 @@ public enum DepositComponentProvider implements IComponentProvider, IServerDataP
         if (accessor.getServerData().contains("chargeTime") && accessor.getServerData().contains("progress")) {
             TimeUnit chargeTime = TimeUnit.inTicks(accessor.getServerData().getInt("chargeTime"));
             TimeUnit progress = TimeUnit.inTicks(accessor.getServerData().getInt("progress"));
-            tooltip.add(new TextComponent("Cooldown: " + chargeTime.subtract(progress) ));
+            tooltip.add(new TextComponent("Cooldown: " + chargeTime.subtract(progress)));
         }
     }
 
