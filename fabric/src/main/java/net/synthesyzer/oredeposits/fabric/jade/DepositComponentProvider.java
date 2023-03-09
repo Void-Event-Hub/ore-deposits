@@ -31,7 +31,7 @@ public enum DepositComponentProvider implements IBlockComponentProvider, IServer
 
     @Override
     public ResourceLocation getUid() {
-        return new ResourceLocation(OreDeposits.MOD_ID, "progress");
+        return new ResourceLocation(OreDeposits.MOD_ID, "charging_deposit");
     }
 
     @Override
