@@ -47,6 +47,10 @@ public class DepositBreakEventHandler {
         }
 
         if (block instanceof DepositBlock depositBlock) {
+            if (!player.getMainHandItem().isCorrectToolForDrops(blockState)) {
+                return EventResult.interruptFalse();
+            }
+
             givePlayerBlockLootTable((ServerLevel) level, player, blockState);
             level.playSound(null, player.blockPosition(), SoundEvents.ITEM_PICKUP, player.getSoundSource(), 0.6f, 1f + (float) Math.random() * 0.5f);
             damageMainHandTool(player);
