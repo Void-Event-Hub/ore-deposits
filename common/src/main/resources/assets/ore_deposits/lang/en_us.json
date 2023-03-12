@@ -12,6 +12,6 @@
   "block.ore_deposits.voidium_deposit": "Voidium Deposit",
   "item.ore_deposits.aquarite": "Aquarite",
   "item.ore_deposits.flamnite": "Flamnite",
-  "item.ore_deposits.voidium": "Aquarite",
+  "item.ore_deposits.voidium": "Voidium",
   "config.jade.plugin_ore_deposits.charging_deposit": "Charging Deposit"
 }
